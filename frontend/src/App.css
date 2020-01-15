@@ -1,0 +1,35 @@
+.App {
+  text-align: center;
+  margin: 0 auto;
+  width: 980px;
+}
+
+.App-header {
+  background-color: #9c9c9c;
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  padding: 0 20px;
+}
+
+#cart, #homePage {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+#homePage {
+  display: none;
+}
+
+#cart-container {
+  display: none;
+}
+
+.pizza-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}

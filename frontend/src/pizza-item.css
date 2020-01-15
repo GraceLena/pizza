@@ -1,0 +1,20 @@
+.pizza {
+    width: 225px;
+    height: 270px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+img {
+    width: 180px;
+}
+
+.pizza-count {
+    width: 30px;
+}
