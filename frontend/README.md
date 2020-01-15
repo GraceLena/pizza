@@ -1,10 +1,10 @@
 ## Structure
 
-<pre> **/frontend/src/** </pre>
-<pre> App <- App.css</pre>
-<pre>  |_ Cart <- cart.css</pre>
-<pre>  |_ ListItems</div>
-<pre>      |_ ItemPizza <- item-pizza.css</pre>
+ **/frontend/src/**
+<pre> App <- App.css
+  |_ Cart <- cart.css
+  |_ ListItems
+      |_ ItemPizza <- item-pizza.css</pre>
 
 ## Application
 
