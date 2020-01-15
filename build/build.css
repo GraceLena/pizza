@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App {
+  text-align: center;
+  margin: 0 auto;
+  width: 980px;
+}
+
+.App-header {
+  background-color: #9c9c9c;
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  padding: 0 20px;
+}
+
+#cart, #homePage {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+#homePage {
+  display: none;
+}
+
+#cart-container {
+  display: none;
+}
+
+.pizza-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.pizza {
+    width: 225px;
+    height: 270px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+img {
+    width: 180px;
+}
+
+.pizza-count {
+    width: 30px;
+}
+
