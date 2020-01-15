@@ -22,7 +22,6 @@ class ListItems extends Component {
             const pizzaData = this.state.pizzaData;
             pizzaData[index].pizzaStatus = +event.target.value ? +event.target.value : 0 ;
             this.setState({ pizzaData });
-            //console.log(+event.target.value);
           }
          
         this.submit = () => {
@@ -37,7 +36,6 @@ class ListItems extends Component {
             }
         }).then(function(res) {
             res.json().then(function(resp) {
-            //console.log(resp);
             })
         })
         }

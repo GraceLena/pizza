@@ -24,12 +24,24 @@ class App extends Component {
       document.getElementById('main').style.display='none';
       document.getElementById('cart-container').style.display='block';
 
-      fetch('http://127.0.0.1:8000/api/order/')  //http://localhost:3000/ //http://127.0.0.1:8000/api/order/
+      fetch('http://127.0.0.1:8000/api/order/')
       .then(function(res) {
-        res.json().then(function(resp) {
+        /*res.json().then(function(resp) {
         this.setState({ pizzaData: resp.pizzaData });
-        console.log(this.state.pizzaData);
-      });
+      });*/
+      
+      /* dummy data 
+      const pizzaData = [
+        {type: 1, pic: './pic-pizza.jpg', price: 5, pizzaStatus: 2},
+        {type: 2, pic: './pic-pizza-2.jpg', price: 6, pizzaStatus: 0},
+        {type: 3, pic: './pic-pizza-3.jpg', price: 7, pizzaStatus: 0},
+        {type: 4, pic: './pic-pizza-4.jpg', price: 8, pizzaStatus: 0},
+        {type: 5, pic: './pic-pizza-5.jpg', price: 9, pizzaStatus: 0},
+        {type: 6, pic: './pic-pizza-6.jpg', price: 10, pizzaStatus: 0},
+        {type: 7, pic: './pic-pizza-7.jpg', price: 11, pizzaStatus: 0},
+        {type: 8, pic: './pic-pizza-8.jpg', price: 12, pizzaStatus: 0}
+      ];
+      this.setState({ pizzaData });*/
     });
     }
 
@@ -41,39 +53,6 @@ class App extends Component {
       document.getElementById('main').style.display='block';
     }
 
-    /*this.changeCount = (event) => {
-      //const { pizzaData } = this.state.pizzaData;
-      //pizzaData[pizzaData[0].type-1].pizzaStatus = event.target.value;
-      //this.setState({ pizzaData });
-      console.log(event.target.parentElement.parentElement);
-    }*/
-   
-    /*this.submit = () => {
-      console.log(this.state);
-
-      fetch('http://localhost:3000/', { //http://127.0.0.1:8000/api/login
-        method: 'post',
-        body: JSON.stringify(this.state),
-        headers: {
-          'Accept': 'aplication/json',
-          'Content-Type': 'aplication/json'
-        }
-      }).then(function(res) {
-        res.json().then(function(resp) {
-          console.log(resp);
-        })
-      })
-    }*/
-  }
-
-  componentDidMount() {
-    /*fetch('http://localhost:3000/')  //http://127.0.0.1:8000/api/order/
-    .then(function(res) {
-      res.json().then(function(resp) {
-        this.setState({ pizzaData: resp.pizzaData });
-        //console.log(this.state.pizzaData);
-      });
-    });*/
   }
 
   render() {

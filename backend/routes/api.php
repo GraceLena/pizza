@@ -17,14 +17,14 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/test', function () {
+/*Route::get('/test', function () {
     return ['name'=>'grace'];
-});
+});*/
 
 //Route::post('login', 'authForm@login');
 
 Route::post('order', 'Order@order');
 
 Route::get('/order', function () {
-    //
+    return $_POST;
 });

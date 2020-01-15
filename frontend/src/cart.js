@@ -3,15 +3,16 @@ import './cart.css';
 
 class Cart extends Component {
     render() {
-        //const pizzaData = this.props.pizzaData;
-        //let totalPrice = +item.pizzaStatus * +item.pizzaPrice;
-
         const pizzaCart = this.props.pizzaData.filter((item) => {
             return item.pizzaStatus > 0; 
         });
+        let totalPrice = 0;
+        pizzaCart.forEach(function(item){
+            totalPrice += item.pizzaStatus * item.pizzaPrice;
+          });
 
         const tableItems = pizzaCart.map((item) =>            
-            <tr><td>{ item.pic }</td><td>{ item.type }</td><td>{ item.price }</td><td>{ item.pizzaStatus }</td><td>{ 0 }</td> }</tr>
+            <tr><td>{ item.pic }</td><td>{ item.type }</td><td>{ item.price }</td><td>{ item.pizzaStatus }</td><td>{ item.pizzaStatus * item.pizzaPrice }</td> }</tr>
         );
 
         return (
@@ -32,7 +33,9 @@ class Cart extends Component {
                         { tableItems }
                     </tbody>
                 </table>
-                <div>Total for order: <span id="total-euro">0</span> &#8364; (<span id="total-dollar">0</span>$)</div>
+                <div>Total for order: <span id="total-order-euro">{ totalPrice }</span> &#8364; (<span id="total-order-dollar">{ (totalPrice*1.1).toFixed(2) }</span>$)</div>
+                <div>Delivery: <span id="delivery-euro">5</span> &#8364; (<span id="delivery-dollar">{ (5*1.1).toFixed(2) }</span>$)</div>
+                <div>Total price: <span id="total-euro">{ totalPrice + 5 }</span> &#8364; (<span id="total-dollar">{ ((totalPrice+5)*1.1).toFixed(2) }</span>$)</div>
                 <button className="order">Order</button>
             </div>
         )
@@ -40,13 +43,3 @@ class Cart extends Component {
 }
 
 export default Cart;
-
-
-       /* const pizzaData = this.state.pizzaData; 
-        const tableItems = pizzaData.map((item, index) =>
-            let totalPrice = +item.pizzaStatus * +item.pizzaPrice;
-            item.pizzaStatus > 0 ? <td>{ item.pic }</td><td>{ item.type }</td><td>{ item.price }</td><td>{ item.pizzaStatus }</td><td>{ totalPrice }</td>
-        );*/
-        /*return (
-            <div className='pizza-container'>{tableItems}</div>
-            );*/
